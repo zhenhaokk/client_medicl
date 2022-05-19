@@ -4,15 +4,18 @@ import { Chat } from "stream-chat-react";
 import Cookies from "universal-cookie";
 
 import "./App.css";
-import { ChannelListContainer, ChannelContainer } from "./components";
+import { ChannelListContainer, ChannelContainer, Auth } from "./components";
 
 const apiKey = "nmmxf3j5qbza";
 const client = StreamChat.getInstance(apiKey);
+const authToken = false;
 
 const App = () => {
   const [createType, setCreateType] = useState("");
   const [isCreating, setIsCreating] = useState(false);
   const [isEditing, setIsEditing] = useState(false);
+
+  if (!authToken) return <Auth />;
 
   return (
     <div className="app__wrapper">
