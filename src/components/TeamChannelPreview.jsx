@@ -44,12 +44,12 @@ const TeamChannelPreview = ({
           : "channel-preview__wrapper"
       }
       onClick={() => {
-        // setIsCreating(false);
-        // setIsEditing(false);
-        // setActiveChannel(channel);
-        // if (setToggleContainer) {
-        //   setToggleContainer((prevState) => !prevState);
-        // }
+        setIsCreating(false);
+        setIsEditing(false);
+        setActiveChannel(channel);
+        if (setToggleContainer) {
+          setToggleContainer((prevState) => !prevState);
+        }
         console.log(channel);
       }}
     >
